@@ -1,10 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, Button, View } from 'react-native';
+//import { BleManager } from 'react-native-ble-plx';
+
+//const manager = new BleManager();
+
+const scan = () => {
+  /* manager.startDeviceScan(null, null, (err, device) => {
+    console.log(device);
+  }); */
+  console.log("scan");
+}
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>BT uController</Text>
+      <Button title='BT list' onPress={scan}/>
       <StatusBar style="auto" />
     </View>
   );
